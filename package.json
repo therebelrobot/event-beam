@@ -1,0 +1,79 @@
+{
+  "name": "event-beam",
+  "version": "0.0.1",
+  "description": "A browser-compatible event emitter that supports asynchronous, synchronous, and queued event listeners",
+  "main": "lib/event-beam.js",
+  "scripts": {
+    "test": "tap ./**.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/therebelrobot/event-beam.git"
+  },
+  "keywords": [
+    "event",
+    "emitter",
+    "emit",
+    "event-emitter",
+    "eventemitter",
+    "events",
+    "sync",
+    "synchronous",
+    "async",
+    "asynchronous",
+    "queue",
+    "queueing",
+    "browser",
+    "browserify"
+  ],
+  "author": "Trent Oswald <trentoswald@therebelrobot.com> (@therebelrobot)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/therebelrobot/event-beam/issues"
+  },
+  "homepage": "https://github.com/therebelrobot/event-beam#readme",
+  "devDependencies": {
+    "careful": "^1.0.2",
+    "ghooks": "^1.2.1",
+    "standard": "^7.1.0",
+    "tap": "^5.7.1",
+    "validate-commit-msg": "^2.6.1"
+  },
+    "standard": {
+    "ignore": [
+      "dist"
+    ]
+  },
+  "config": {
+    "careful": {
+      "prefixes": [
+        "feature",
+        "fix",
+        "hotfix",
+        "release",
+        "pre-release",
+        "docs",
+        "tests"
+      ],
+      "suggestions": {
+        "features": "feature",
+        "feat": "feature",
+        "bugfix": "fix",
+        "releases": "release",
+        "doc": "docs",
+        "test": "tests"
+      }
+    },
+    "ghooks": {
+      "pre-commit": "careful",
+      "pre-push": "careful",
+      "commit-msg": "validate-commit-msg"
+    }
+  },
+  "nyc": {
+    "exclude": [
+      "**/*.tap.js",
+      "dist"
+    ]
+  }
+}
